@@ -7,11 +7,33 @@
 //
 
 #import "ShapeFactory.h"
+#import "ShapeClass.h"
 #import "SquareClass.h"
 #import "TriangleClass.h"
 #import "RectangleClass.h"
 
 @implementation ShapeFactory
 
++(ShapeClass*)CreateShape:(NSInteger)type
+{
+    switch (type) 
+    {
+        case 0:
+        {
+            return [[SquareClass alloc] init];
+        }
+            break;
+        case 1:
+            //stf
+            break;
+        case 2:
+            //stf
+            break;
+            
+        default:
+            break;
+    }
+    return nil;
+}
 
 @end

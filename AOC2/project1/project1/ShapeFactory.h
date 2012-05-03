@@ -11,5 +11,6 @@
 
 @interface ShapeFactory : NSObject
 
++(ShapeClass*)CreateShape:(NSInteger)type;
 
 @end

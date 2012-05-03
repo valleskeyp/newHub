@@ -17,12 +17,10 @@
 
 - (void)viewDidLoad
 {   
-    SquareClass *square = [[SquareClass alloc] init];
-    if (square != nil) 
-    {
-        NSInteger area = [square getArea];
-        NSLog(@"area=%d", area);
-    }
+    SquareClass *square = (SquareClass*)[ShapeFactory CreateShape:0];
+    int area = [square getArea];
+    NSString* name = [square getName];
+    NSLog(@"Shape %@, Area:%d", name, area);
     
     self.view.backgroundColor = [UIColor lightGrayColor];
     field1 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 90.0f, 320.0f, 80.0f)];

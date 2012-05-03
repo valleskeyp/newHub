@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ShapeClass.h"
 
 @interface ShapeFactory : NSObject
+
 
 @end

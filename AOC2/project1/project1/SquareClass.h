@@ -10,4 +10,5 @@
 
 @interface SquareClass : ShapeClass
 
+-(NSInteger)getArea;
 @end

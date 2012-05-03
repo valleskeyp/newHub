@@ -10,4 +10,17 @@
 
 @implementation RectangleClass
 
+-(id)init
+{
+    if (self = [super init])
+    {
+        numSides = 4;
+        name = @"rectangle";
+    }
+    return self;
+}
+-(NSInteger)getArea
+{
+    return 4 * 2;
+}
 @end

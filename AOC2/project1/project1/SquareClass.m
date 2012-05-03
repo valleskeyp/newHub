@@ -10,4 +10,17 @@
 
 @implementation SquareClass
 
+-(id)init
+{
+    if (self = [super init])
+    {
+        numSides = 4;
+        name = @"square";
+    }
+    return self;
+}
+-(NSInteger)getArea
+{
+    return 4 * 4;
+}
 @end

@@ -20,15 +20,18 @@
     
     return self;
 }
-
+-(NSInteger)getArea
+{
+    return 0;
+}
 -(int)getNumSides
 {
-    
+    return numSides;
 }
 
 -(NSString*)getName
 {
-    
+    return name;
 }
 
 @end

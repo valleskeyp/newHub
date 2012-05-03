@@ -17,10 +17,11 @@
 
 - (void)viewDidLoad
 {   
-    shapeClass = [[ShapeClass alloc] init];
-    if (shapeClass != nil) 
+    SquareClass *square = [[SquareClass alloc] init];
+    if (square != nil) 
     {
-        
+        NSInteger area = [square getArea];
+        NSLog(@"area=%d", area);
     }
     
     self.view.backgroundColor = [UIColor lightGrayColor];

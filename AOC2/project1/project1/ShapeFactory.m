@@ -7,6 +7,9 @@
 //
 
 #import "ShapeFactory.h"
+#import "SquareClass.h"
+#import "TriangleClass.h"
+#import "RectangleClass.h"
 
 @implementation ShapeFactory
 

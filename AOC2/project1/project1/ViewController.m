@@ -7,21 +7,57 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
-
-@end
+#import "ShapeClass.h"
+#import "SquareClass.h"
+#import "TriangleClass.h"
+#import "RectangleClass.h"
+#import "ShapeFactory.h"
 
 @implementation ViewController
 
 - (void)viewDidLoad
-{
+{   
+    shapeClass = [[ShapeClass alloc] init];
+    if (shapeClass != nil) 
+    {
+        
+    }
+    
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    field1 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 90.0f, 320.0f, 80.0f)];
+    if (field1 != nil) 
+    {
+        field1.textColor = [UIColor blackColor];
+        field1.text = @"Default text1";
+        field1.backgroundColor = [UIColor lightGrayColor];
+        field1.textAlignment = UITextAlignmentCenter;
+        [self.view addSubview:field1];
+    }
+    field2 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 180.0f, 320.0f, 80.0f)];
+    if (field2 != nil) 
+    {
+        field2.textColor = [UIColor blackColor];
+        field2.text = @"Default text2";
+        field2.backgroundColor = [UIColor lightGrayColor];
+        field2.textAlignment = UITextAlignmentCenter;
+        [self.view addSubview:field2];
+    }
+    field3 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 270.0f, 320.0f, 80.0f)];
+    if (field3 != nil) 
+    {
+        field3.textColor = [UIColor blackColor];
+        field3.text = @"Default text3";
+        field3.backgroundColor = [UIColor lightGrayColor];
+        field3.textAlignment = UITextAlignmentCenter;
+        [self.view addSubview:field3];
+    }
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)viewDidUnload
 {
+    
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

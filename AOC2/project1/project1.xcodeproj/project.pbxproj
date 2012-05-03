@@ -16,6 +16,11 @@
 		148B7F411550351D00E7CDE1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B7F401550351D00E7CDE1 /* ViewController.m */; };
 		148B7F441550351E00E7CDE1 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 148B7F421550351E00E7CDE1 /* ViewController_iPhone.xib */; };
 		148B7F471550351E00E7CDE1 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 148B7F451550351E00E7CDE1 /* ViewController_iPad.xib */; };
+		148B7F721552D4B300E7CDE1 /* ShapeClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B7F711552D4B300E7CDE1 /* ShapeClass.m */; };
+		148B7F781552D51C00E7CDE1 /* SquareClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B7F771552D51C00E7CDE1 /* SquareClass.m */; };
+		148B7F7B1552D52C00E7CDE1 /* TriangleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B7F7A1552D52C00E7CDE1 /* TriangleClass.m */; };
+		148B7F7E1552D53C00E7CDE1 /* RectangleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B7F7D1552D53C00E7CDE1 /* RectangleClass.m */; };
+		148B7F8D1552DC4700E7CDE1 /* ShapeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B7F8C1552DC4700E7CDE1 /* ShapeFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +38,16 @@
 		148B7F401550351D00E7CDE1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		148B7F431550351E00E7CDE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		148B7F461550351E00E7CDE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		148B7F701552D4B300E7CDE1 /* ShapeClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeClass.h; sourceTree = "<group>"; };
+		148B7F711552D4B300E7CDE1 /* ShapeClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeClass.m; sourceTree = "<group>"; };
+		148B7F761552D51C00E7CDE1 /* SquareClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareClass.h; sourceTree = "<group>"; };
+		148B7F771552D51C00E7CDE1 /* SquareClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareClass.m; sourceTree = "<group>"; };
+		148B7F791552D52C00E7CDE1 /* TriangleClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TriangleClass.h; sourceTree = "<group>"; };
+		148B7F7A1552D52C00E7CDE1 /* TriangleClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TriangleClass.m; sourceTree = "<group>"; };
+		148B7F7C1552D53C00E7CDE1 /* RectangleClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectangleClass.h; sourceTree = "<group>"; };
+		148B7F7D1552D53C00E7CDE1 /* RectangleClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RectangleClass.m; sourceTree = "<group>"; };
+		148B7F8B1552DC4700E7CDE1 /* ShapeFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeFactory.h; sourceTree = "<group>"; };
+		148B7F8C1552DC4700E7CDE1 /* ShapeFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +101,16 @@
 				148B7F421550351E00E7CDE1 /* ViewController_iPhone.xib */,
 				148B7F451550351E00E7CDE1 /* ViewController_iPad.xib */,
 				148B7F341550351D00E7CDE1 /* Supporting Files */,
+				148B7F701552D4B300E7CDE1 /* ShapeClass.h */,
+				148B7F711552D4B300E7CDE1 /* ShapeClass.m */,
+				148B7F761552D51C00E7CDE1 /* SquareClass.h */,
+				148B7F771552D51C00E7CDE1 /* SquareClass.m */,
+				148B7F791552D52C00E7CDE1 /* TriangleClass.h */,
+				148B7F7A1552D52C00E7CDE1 /* TriangleClass.m */,
+				148B7F7C1552D53C00E7CDE1 /* RectangleClass.h */,
+				148B7F7D1552D53C00E7CDE1 /* RectangleClass.m */,
+				148B7F8B1552DC4700E7CDE1 /* ShapeFactory.h */,
+				148B7F8C1552DC4700E7CDE1 /* ShapeFactory.m */,
 			);
 			path = project1;
 			sourceTree = "<group>";
@@ -167,6 +192,11 @@
 				148B7F3A1550351D00E7CDE1 /* main.m in Sources */,
 				148B7F3E1550351D00E7CDE1 /* AppDelegate.m in Sources */,
 				148B7F411550351D00E7CDE1 /* ViewController.m in Sources */,
+				148B7F721552D4B300E7CDE1 /* ShapeClass.m in Sources */,
+				148B7F781552D51C00E7CDE1 /* SquareClass.m in Sources */,
+				148B7F7B1552D52C00E7CDE1 /* TriangleClass.m in Sources */,
+				148B7F7E1552D53C00E7CDE1 /* RectangleClass.m in Sources */,
+				148B7F8D1552DC4700E7CDE1 /* ShapeFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

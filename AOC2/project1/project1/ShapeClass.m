@@ -20,7 +20,7 @@
     
     return self;
 }
--(NSInteger)getArea
+-(int)getArea
 {
     return 0;
 }

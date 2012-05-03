@@ -19,7 +19,7 @@
     }
     return self;
 }
--(NSInteger)getArea
+-(int)getArea
 {
     return 4 * 4;
 }

@@ -10,4 +10,5 @@
 
 @interface RectangleClass : ShapeClass
 
+-(int)getArea;
 @end

@@ -19,8 +19,8 @@
     }
     return self;
 }
--(NSInteger)getArea
+-(int)getArea
 {
-    return 0.5f * 3 * 2;
+    return 0.5 * 4 * 3;
 }
 @end

@@ -19,18 +19,16 @@
     switch (type) 
     {
         case 0:
-        {
             return [[SquareClass alloc] init];
-        }
             break;
         case 1:
-            //stf
+            return [[TriangleClass alloc] init];
             break;
         case 2:
-            //stf
+            return [[RectangleClass alloc] init];
             break;
-            
         default:
+            NSLog(@"There was an invalid switch type.");
             break;
     }
     return nil;

@@ -16,6 +16,8 @@
 		14E4E3FF15597F2D00A7E9B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E4E3FE15597F2D00A7E9B6 /* ViewController.m */; };
 		14E4E40215597F2D00A7E9B6 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E4E40015597F2D00A7E9B6 /* ViewController_iPhone.xib */; };
 		14E4E40515597F2D00A7E9B6 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E4E40315597F2D00A7E9B6 /* ViewController_iPad.xib */; };
+		14E4E41A155B0BF500A7E9B6 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E4E419155B0BF500A7E9B6 /* SecondView.xib */; };
+		14E4E41D155B0DB300A7E9B6 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E4E41C155B0DB300A7E9B6 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,9 @@
 		14E4E3FE15597F2D00A7E9B6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		14E4E40115597F2D00A7E9B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		14E4E40415597F2D00A7E9B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		14E4E419155B0BF500A7E9B6 /* SecondView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondView.xib; sourceTree = "<group>"; };
+		14E4E41B155B0DB300A7E9B6 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		14E4E41C155B0DB300A7E9B6 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +91,9 @@
 				14E4E40015597F2D00A7E9B6 /* ViewController_iPhone.xib */,
 				14E4E40315597F2D00A7E9B6 /* ViewController_iPad.xib */,
 				14E4E3F215597F2D00A7E9B6 /* Supporting Files */,
+				14E4E419155B0BF500A7E9B6 /* SecondView.xib */,
+				14E4E41B155B0DB300A7E9B6 /* SecondViewController.h */,
+				14E4E41C155B0DB300A7E9B6 /* SecondViewController.m */,
 			);
 			path = project2;
 			sourceTree = "<group>";
@@ -154,6 +162,7 @@
 				14E4E3F615597F2D00A7E9B6 /* InfoPlist.strings in Resources */,
 				14E4E40215597F2D00A7E9B6 /* ViewController_iPhone.xib in Resources */,
 				14E4E40515597F2D00A7E9B6 /* ViewController_iPad.xib in Resources */,
+				14E4E41A155B0BF500A7E9B6 /* SecondView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +176,7 @@
 				14E4E3F815597F2D00A7E9B6 /* main.m in Sources */,
 				14E4E3FC15597F2D00A7E9B6 /* AppDelegate.m in Sources */,
 				14E4E3FF15597F2D00A7E9B6 /* ViewController.m in Sources */,
+				14E4E41D155B0DB300A7E9B6 /* SecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SecondViewController.h"
 
 @interface ViewController ()
 
@@ -14,8 +15,18 @@
 
 @implementation ViewController
 
+-(IBAction)onClick:(id)sender
+{
+    SecondViewController *secondView = [[SecondViewController alloc] initWithNibName:@"SecondView" bundle:nil];
+    if (secondView != nil) 
+    {
+        [self presentModalViewController:secondView animated:YES];
+    }
+}
+
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

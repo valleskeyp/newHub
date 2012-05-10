@@ -10,9 +10,12 @@
 
 @interface ViewController : UIViewController
 {
+    IBOutletCollection(UIButton)NSArray *toDisable;
+    int firstValue;
+    int secondValue;
     IBOutlet UITextField *inputField;
-    bool powerStatus;
 }
+-(IBAction)clearButton:(id)sender;
 -(IBAction)addButton:(id)sender;
 -(IBAction)equalsButton:(id)sender;
 -(IBAction)onSwitch:(id)sender;

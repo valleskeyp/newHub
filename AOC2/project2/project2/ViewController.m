@@ -17,11 +17,21 @@
 
 -(IBAction)addButton:(id)sender
 {
-    //stf
+    firstValue = [inputField.text intValue];
+    inputField.text = @"";
 }
 -(IBAction)equalsButton:(id)sender
 {
-    //stf
+    secondValue = [inputField.text intValue];
+    int combine = firstValue + secondValue;
+    NSString *combineToString = [NSString stringWithFormat:@"%d", combine];
+    inputField.text = combineToString;
+}
+-(IBAction)clearButton:(id)sender
+{
+    firstValue = 0;
+    secondValue = 0;
+    inputField.text = @"";
 }
 -(IBAction)calcButton:(id)sender
 {
@@ -38,19 +48,26 @@
     UISwitch *thisSwitch = (UISwitch*)sender;
     if (thisSwitch != nil) 
     {
-        powerStatus = thisSwitch.on;
+        bool powerStatus = thisSwitch.on; // instead of this variable, just disable/enable buttons from within this function?
         if (powerStatus == false) 
         {
             NSLog(@"Turned off");
             //turn off all buttons
-            
+            for (int i = 0; i < [toDisable count]; i++) {
+                [[toDisable objectAtIndex:i] setEnabled:NO];
+            }
             //clear first / second variables 
-            
+            firstValue = 0;
+            secondValue = 0;
             //clear input field
             inputField.text = @"";
         } else {
             NSLog(@"Turned on");
             //turn on all buttons
+            for (int i = 0; i < [toDisable count]; i++) {
+                [[toDisable objectAtIndex:i] setEnabled:YES];
+            }
+
         }
     }
 }

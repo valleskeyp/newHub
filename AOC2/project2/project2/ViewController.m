@@ -15,20 +15,29 @@
 
 @implementation ViewController
 
--(IBAction)colorControl:(id)sender
+- (void)viewDidLoad
 {
-    UISegmentedControl *thisControl = (UISegmentedControl*)sender;
-    if (thisControl != nil) 
-    {
-        if (thisControl.selectedSegmentIndex == 0) {
-            self.view.backgroundColor = [UIColor whiteColor];
-        } else if (thisControl.selectedSegmentIndex == 1) {
-            self.view.backgroundColor = [UIColor blueColor];
-        } else if (thisControl.selectedSegmentIndex == 2) {
-            self.view.backgroundColor = [UIColor greenColor];
-        }
+    [super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    } else {
+        return YES;
     }
 }
+
+////// Calculator Actions //////
+
 -(IBAction)addButton:(id)sender
 {
     firstValue = [inputField.text intValue];
@@ -75,37 +84,36 @@
             for (int i = 0; i < [toDisable count]; i++) {
                 [[toDisable objectAtIndex:i] setEnabled:YES];
             }
-
+            
         }
     }
 }
+
+//////  Segmented Color Controls //////
+
+-(IBAction)colorControl:(id)sender
+{
+    UISegmentedControl *thisControl = (UISegmentedControl*)sender;
+    if (thisControl != nil) 
+    {
+        if (thisControl.selectedSegmentIndex == 0) {
+            self.view.backgroundColor = [UIColor whiteColor];
+        } else if (thisControl.selectedSegmentIndex == 1) {
+            self.view.backgroundColor = [UIColor blueColor];
+        } else if (thisControl.selectedSegmentIndex == 2) {
+            self.view.backgroundColor = [UIColor greenColor];
+        }
+    }
+}
+
+//////  Second View Controller //////
+
 -(IBAction)onClick:(id)sender
 {
     SecondViewController *secondView = [[SecondViewController alloc] initWithNibName:@"SecondView" bundle:nil];
     if (secondView != nil) 
     {
         [self presentModalViewController:secondView animated:YES];
-    }
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
-        return YES;
     }
 }
 

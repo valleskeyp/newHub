@@ -8,10 +8,6 @@
 
 #import "SecondViewController.h"
 
-@interface SecondViewController ()
-
-@end
-
 @implementation SecondViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -27,12 +23,6 @@
 {
     [self dismissModalViewControllerAnimated:YES];
 }
-- (void)loadView
-{
-    // If you create your views manually, you MUST override this method and use it to create your views.
-    // If you use Interface Builder to create your views, then you must NOT override this method.
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];

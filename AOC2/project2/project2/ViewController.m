@@ -62,22 +62,16 @@
     UISwitch *thisSwitch = (UISwitch*)sender;
     if (thisSwitch != nil) 
     {
-        bool powerStatus = thisSwitch.on; // instead of this variable, just disable/enable buttons from within this function?
+        bool powerStatus = thisSwitch.on;
         if (powerStatus == false) 
         {
-            NSLog(@"Turned off");
-            //turn off all buttons
             for (int i = 0; i < [toDisable count]; i++) {
                 [[toDisable objectAtIndex:i] setEnabled:NO];
             }
-            //clear first / second variables 
             firstValue = 0;
             secondValue = 0;
-            //clear input field
             inputField.text = @"";
         } else {
-            NSLog(@"Turned on");
-            //turn on all buttons
             for (int i = 0; i < [toDisable count]; i++) {
                 [[toDisable objectAtIndex:i] setEnabled:YES];
             }

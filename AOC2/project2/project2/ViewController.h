@@ -10,9 +10,14 @@
 
 @interface ViewController : UIViewController
 {
+    IBOutlet UITextField *inputField;
     bool powerStatus;
 }
+-(IBAction)addButton:(id)sender;
+-(IBAction)equalsButton:(id)sender;
 -(IBAction)onSwitch:(id)sender;
 -(IBAction)onClick:(id)sender;
+-(IBAction)calcButton:(id)sender;
+
 
 @end

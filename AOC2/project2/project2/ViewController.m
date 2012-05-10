@@ -15,6 +15,24 @@
 
 @implementation ViewController
 
+-(IBAction)addButton:(id)sender
+{
+    //stf
+}
+-(IBAction)equalsButton:(id)sender
+{
+    //stf
+}
+-(IBAction)calcButton:(id)sender
+{
+    UIButton *thisButton = (UIButton*)sender;
+    if (thisButton != nil) 
+    {
+        NSMutableString *currentInput = [[NSMutableString alloc] initWithString:inputField.text];
+        [currentInput appendString:thisButton.titleLabel.text];
+        inputField.text = currentInput;
+    }
+}
 -(IBAction)onSwitch:(id)sender
 {
     UISwitch *thisSwitch = (UISwitch*)sender;
@@ -25,7 +43,11 @@
         {
             NSLog(@"Turned off");
             //turn off all buttons
-            //clear first / second variables and input field
+            
+            //clear first / second variables 
+            
+            //clear input field
+            inputField.text = @"";
         } else {
             NSLog(@"Turned on");
             //turn on all buttons

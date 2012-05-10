@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-
+{
+    bool powerStatus;
+}
+-(IBAction)onSwitch:(id)sender;
 -(IBAction)onClick:(id)sender;
 
 @end

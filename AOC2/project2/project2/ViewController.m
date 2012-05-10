@@ -15,6 +15,23 @@
 
 @implementation ViewController
 
+-(IBAction)onSwitch:(id)sender
+{
+    UISwitch *thisSwitch = (UISwitch*)sender;
+    if (thisSwitch != nil) 
+    {
+        powerStatus = thisSwitch.on;
+        if (powerStatus == false) 
+        {
+            NSLog(@"Turned off");
+            //turn off all buttons
+            //clear first / second variables and input field
+        } else {
+            NSLog(@"Turned on");
+            //turn on all buttons
+        }
+    }
+}
 -(IBAction)onClick:(id)sender
 {
     SecondViewController *secondView = [[SecondViewController alloc] initWithNibName:@"SecondView" bundle:nil];
@@ -26,7 +43,6 @@
 
 - (void)viewDidLoad
 {
-    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

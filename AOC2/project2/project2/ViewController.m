@@ -15,6 +15,20 @@
 
 @implementation ViewController
 
+-(IBAction)colorControl:(id)sender
+{
+    UISegmentedControl *thisControl = (UISegmentedControl*)sender;
+    if (thisControl != nil) 
+    {
+        if (thisControl.selectedSegmentIndex == 0) {
+            self.view.backgroundColor = [UIColor whiteColor];
+        } else if (thisControl.selectedSegmentIndex == 1) {
+            self.view.backgroundColor = [UIColor blueColor];
+        } else if (thisControl.selectedSegmentIndex == 2) {
+            self.view.backgroundColor = [UIColor greenColor];
+        }
+    }
+}
 -(IBAction)addButton:(id)sender
 {
     firstValue = [inputField.text intValue];

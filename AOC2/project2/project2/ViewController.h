@@ -15,6 +15,7 @@
     int secondValue;
     IBOutlet UITextField *inputField;
 }
+-(IBAction)colorControl:(id)sender;
 -(IBAction)clearButton:(id)sender;
 -(IBAction)addButton:(id)sender;
 -(IBAction)equalsButton:(id)sender;

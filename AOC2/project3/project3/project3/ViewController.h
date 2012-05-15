@@ -12,6 +12,7 @@
 @interface ViewController : UIViewController <SecondViewDelegate>
 {
     IBOutlet UITextView *eventList;
+    NSMutableArray *eventArray;
 }
 -(IBAction)onClick:(id)sender;
 

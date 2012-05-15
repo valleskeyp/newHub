@@ -17,7 +17,14 @@
 
 -(void)DidEnd:(NSString *)inputString
 {
-    eventList.text = inputString;
+    [eventArray addObject:inputString];
+    NSMutableString *temp = [[NSMutableString alloc] init];
+    for (NSString *element in eventArray)
+    {
+        [temp appendString:element];
+    }
+    eventList.text = temp; // coming up blank, have to fix this later //////////////////
+                            //  text and date string are being sent in, have to check the output of that
 }
 
 - (void)viewDidLoad

@@ -17,6 +17,7 @@
 @interface SecondViewController : UIViewController <UITextFieldDelegate>
 {
     id<SecondViewDelegate> delegate;
+    IBOutlet UIDatePicker *datePicker;
 }
 -(IBAction)onClose:(id)sender;
 

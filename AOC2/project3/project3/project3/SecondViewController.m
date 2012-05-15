@@ -23,7 +23,13 @@
 {
     if (delegate != nil)
     {
-        [delegate DidEnd:textField.text];
+        NSDate *inputDate = datePicker.date;
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"cccc, MMM d, hh:mm aa"];
+        NSString *dateString = [dateFormat stringFromDate:inputDate];
+        
+        NSString *eventAndDate = [NSString stringWithFormat:@"%@\n%@",textField.text,dateString];
+        [delegate DidEnd:eventAndDate];
     }
 }
 -(IBAction)onClose:(id)sender
@@ -33,6 +39,10 @@
 
 - (void)viewDidLoad
 {
+    NSDate *Date=[NSDate date];
+    
+    datePicker.minimumDate=Date;
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

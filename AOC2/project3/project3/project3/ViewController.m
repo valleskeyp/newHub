@@ -7,12 +7,18 @@
 //
 
 #import "ViewController.h"
+#import "SecondViewController.h"
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
+-(void)DidEnd:(NSString *)inputString
+{
+    eventList.text = inputString;
+}
 
 - (void)viewDidLoad
 {
@@ -34,5 +40,14 @@
         return YES;
     }
 }
-
+//////  Second View button //////
+-(IBAction)onClick:(id)sender
+{
+    SecondViewController *secondView = [[SecondViewController alloc] initWithNibName:@"SecondView" bundle:nil];
+    if (secondView != nil) 
+    {
+        secondView.delegate = self;
+        [self presentModalViewController:secondView animated:YES];
+    }
+}
 @end

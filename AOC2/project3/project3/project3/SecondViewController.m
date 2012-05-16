@@ -23,14 +23,21 @@
 {
     if (delegate != nil)
     {
-        NSDate *inputDate = datePicker.date;
-        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-        [dateFormat setDateFormat:@"cccc, MMM d, hh:mm aa"];
-        NSString *dateString = [dateFormat stringFromDate:inputDate];
+        if (textField.text != @"") //  epic impasse, since i used DidEndEditing closing keyboard duplicates information..  and if statement can't detect an empty field for some reason.. disregarding that it duplicates anything so gotta fix that. 
+        {
+            NSDate *inputDate = datePicker.date;
+            NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+            [dateFormat setDateFormat:@"cccc, MMM d, hh:mm aa"];
+            NSString *dateString = [dateFormat stringFromDate:inputDate];
         
-        NSString *eventAndDate = [NSString stringWithFormat:@"New Event:  %@\n%@\n\n",textField.text,dateString];
-        [delegate DidEnd:eventAndDate];
+            NSString *eventAndDate = [NSString stringWithFormat:@"New Event:  %@\n%@\n\n",textField.text,dateString];
+            [delegate DidEnd:eventAndDate];
+        }
     }
+}
+-(IBAction)closeKey:(id)sender
+{
+    [self.view endEditing:true];
 }
 -(IBAction)onClose:(id)sender
 {

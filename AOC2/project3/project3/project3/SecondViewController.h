@@ -19,6 +19,7 @@
     id<SecondViewDelegate> delegate;
     IBOutlet UIDatePicker *datePicker;
 }
+-(IBAction)closeKey:(id)sender;
 -(IBAction)onClose:(id)sender;
 
 @property (strong) id<SecondViewDelegate> delegate;

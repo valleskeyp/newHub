@@ -16,8 +16,10 @@
 
 @interface SecondViewController : UIViewController <UITextFieldDelegate>
 {
+    UIAlertView *pleaseEnter;
     id<SecondViewDelegate> delegate;
     IBOutlet UIDatePicker *datePicker;
+    IBOutlet UITextField *eventField;
 }
 -(IBAction)closeKey:(id)sender;
 -(IBAction)onClose:(id)sender;

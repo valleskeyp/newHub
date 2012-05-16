@@ -19,35 +19,39 @@
     }
     return self;
 }
-- (void)textFieldDidEndEditing:(UITextField *)textField; 
-{
-    if (delegate != nil)
-    {
-        if (textField.text != @"") //  epic impasse, since i used DidEndEditing closing keyboard duplicates information..  and if statement can't detect an empty field for some reason.. disregarding that it duplicates anything so gotta fix that. 
-        {
-            NSDate *inputDate = datePicker.date;
-            NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-            [dateFormat setDateFormat:@"cccc, MMM d, hh:mm aa"];
-            NSString *dateString = [dateFormat stringFromDate:inputDate];
-        
-            NSString *eventAndDate = [NSString stringWithFormat:@"New Event:  %@\n%@\n\n",textField.text,dateString];
-            [delegate DidEnd:eventAndDate];
-        }
-    }
-}
 -(IBAction)closeKey:(id)sender
 {
     [self.view endEditing:true];
 }
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    textField.text = @"";
+}
 -(IBAction)onClose:(id)sender
 {
+    if (delegate != nil)
+    {
+        if (eventField.text.length == 0 || [eventField.text isEqualToString:@"Enter Event."])
+        {
+            [pleaseEnter show];
+        } else {
+            NSDate *inputDate = datePicker.date;
+            NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+            [dateFormat setDateFormat:@"cccc, MMM d, hh:mm aa"];
+            NSString *dateString = [dateFormat stringFromDate:inputDate];
+            
+            NSString *eventAndDate = [NSString stringWithFormat:@"New Event:  %@\n%@\n\n",eventField.text,dateString];
+            [delegate DidEnd:eventAndDate];
+            
+        }
+    }
     [self dismissModalViewControllerAnimated:YES];
 }
 
 - (void)viewDidLoad
 {
     NSDate *Date=[NSDate date];
-    
+    pleaseEnter = [[UIAlertView alloc] initWithTitle:@"Error." message:@"Untitled event not saved." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
     datePicker.minimumDate=Date;
     
     [super viewDidLoad];

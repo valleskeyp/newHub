@@ -9,26 +9,23 @@
 #import "ViewController.h"
 #import "SecondViewController.h"
 
-@interface ViewController ()
-
-@end
-
 @implementation ViewController
 
 -(void)DidEnd:(NSString *)inputString
 {
     [eventArray addObject:inputString];
+    
     NSMutableString *temp = [[NSMutableString alloc] init];
     for (NSString *element in eventArray)
     {
         [temp appendString:element];
     }
-    eventList.text = temp; // coming up blank, have to fix this later //////////////////
-                            //  text and date string are being sent in, have to check the output of that
+    eventList.text = temp;
 }
 
 - (void)viewDidLoad
 {
+    eventArray = [[NSMutableArray alloc] init];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

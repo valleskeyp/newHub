@@ -28,7 +28,7 @@
         [dateFormat setDateFormat:@"cccc, MMM d, hh:mm aa"];
         NSString *dateString = [dateFormat stringFromDate:inputDate];
         
-        NSString *eventAndDate = [NSString stringWithFormat:@"%@\n%@",textField.text,dateString];
+        NSString *eventAndDate = [NSString stringWithFormat:@"New Event:  %@\n%@\n\n",textField.text,dateString];
         [delegate DidEnd:eventAndDate];
     }
 }

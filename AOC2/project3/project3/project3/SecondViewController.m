@@ -42,10 +42,10 @@
             
             NSString *eventAndDate = [NSString stringWithFormat:@"New Event:  %@\n%@\n\n",eventField.text,dateString];
             [delegate DidEnd:eventAndDate];
-            
+            [self dismissModalViewControllerAnimated:YES];
         }
     }
-    [self dismissModalViewControllerAnimated:YES];
+    
 }
 
 - (void)viewDidLoad

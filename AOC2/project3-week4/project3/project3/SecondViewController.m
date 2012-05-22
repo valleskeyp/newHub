@@ -26,6 +26,15 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     textField.text = @"";
+    textField.textColor = [UIColor blackColor];
+}
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if (textField.text.length == 0)
+    {
+        textField.text = @"Enter Event.";
+        textField.textColor = [UIColor lightGrayColor];
+    }
 }
 -(void)swipeLeft
 {

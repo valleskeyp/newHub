@@ -18,5 +18,5 @@
     UISwipeGestureRecognizer *rightSwiper;
 }
 -(void)swipeRight;
-
+-(IBAction)saveButton:(id)sender;
 @end

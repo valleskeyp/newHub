@@ -27,7 +27,7 @@
 {
     textField.text = @"";
 }
--(IBAction)onClose:(id)sender
+-(void)swipeLeft
 {
     if (delegate != nil)
     {
@@ -53,6 +53,10 @@
     NSDate *Date=[NSDate date];
     pleaseEnter = [[UIAlertView alloc] initWithTitle:@"Error." message:@"Untitled event not saved." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
     datePicker.minimumDate=Date;
+    
+    leftSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeft)];
+    leftSwiper.direction = UISwipeGestureRecognizerDirectionLeft;
+    [swipeLeftLabel addGestureRecognizer:leftSwiper];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.

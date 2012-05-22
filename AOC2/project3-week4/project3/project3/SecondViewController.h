@@ -20,9 +20,12 @@
     id<SecondViewDelegate> delegate;
     IBOutlet UIDatePicker *datePicker;
     IBOutlet UITextField *eventField;
+    IBOutlet UILabel *swipeLeftLabel;
+    
+    UISwipeGestureRecognizer *leftSwiper;
 }
 -(IBAction)closeKey:(id)sender;
--(IBAction)onClose:(id)sender;
+-(void)swipeLeft;
 
 @property (strong) id<SecondViewDelegate> delegate;
 

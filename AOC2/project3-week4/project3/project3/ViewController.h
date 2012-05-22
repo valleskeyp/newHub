@@ -13,7 +13,10 @@
 {
     IBOutlet UITextView *eventList;
     NSMutableArray *eventArray;
+    IBOutlet UILabel *swipeRightLabel;
+    
+    UISwipeGestureRecognizer *rightSwiper;
 }
--(IBAction)onClick:(id)sender;
+-(void)swipeRight;
 
 @end

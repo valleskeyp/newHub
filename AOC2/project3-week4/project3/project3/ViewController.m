@@ -26,6 +26,11 @@
 - (void)viewDidLoad
 {
     eventArray = [[NSMutableArray alloc] init];
+    
+    rightSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRight)];
+    rightSwiper.direction = UISwipeGestureRecognizerDirectionRight;
+    [swipeRightLabel addGestureRecognizer:rightSwiper];
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -45,7 +50,7 @@
     }
 }
 //////  Second View button //////
--(IBAction)onClick:(id)sender
+-(void)swipeRight
 {
     SecondViewController *secondView = [[SecondViewController alloc] initWithNibName:@"SecondView" bundle:nil];
     if (secondView != nil) 

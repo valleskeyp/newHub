@@ -19,4 +19,6 @@
 }
 -(void)swipeRight;
 -(IBAction)saveButton:(id)sender;
+-(IBAction)clearButton:(id)sender;
+-(void)alertViewFunction:(NSString*)alertString;
 @end

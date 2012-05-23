@@ -11,6 +11,20 @@
 
 @implementation ViewController
 
+-(IBAction)saveButton:(id)sender
+{
+    NSUserDefaults *savedEvents = [NSUserDefaults standardUserDefaults];
+    if (savedEvents != nil) 
+    {
+        NSString *myEventList = eventList.text;
+        [savedEvents setObject:myEventList forKey:@"theList"];
+        
+        [savedEvents synchronize];
+    }
+    [self alertViewFunction:@"Events were saved."];
+}
+
+
 -(void)DidEnd:(NSString *)inputString
 {
     [eventArray addObject:inputString];
@@ -31,6 +45,16 @@
     rightSwiper.direction = UISwipeGestureRecognizerDirectionRight;
     [swipeRightLabel addGestureRecognizer:rightSwiper];
     
+    NSUserDefaults *savedEvents = [NSUserDefaults standardUserDefaults];
+    if (savedEvents != nil) 
+    {
+        NSString *myEventList = [savedEvents objectForKey:@"theList"];
+        eventList.text = myEventList;
+        if (eventList.text.length == 0)
+        {
+            eventList.text = @"Add Events Below!";
+        }
+    }
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -49,10 +73,23 @@
         return YES;
     }
 }
-//////      Save Button    //////
--(IBAction)saveButton:(id)sender
+-(IBAction)clearButton:(id)sender
 {
-    
+    NSUserDefaults *savedEvents = [NSUserDefaults standardUserDefaults];
+    if (savedEvents != nil) 
+    {
+        NSString *myEventList = @"";
+        [savedEvents setObject:myEventList forKey:@"theList"];
+        
+        [savedEvents synchronize];
+    }
+    eventList.text = @"Add Events Below!";
+    [self alertViewFunction:@"Events cleared."];
+}
+-(void)alertViewFunction:(NSString*)alertString
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:alertString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    [alert show];
 }
 //////  Second View button //////
 -(void)swipeRight

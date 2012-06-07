@@ -15,7 +15,6 @@
 		148D904A1562C64E006433D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 148D90491562C64E006433D8 /* AppDelegate.m */; };
 		148D904D1562C64E006433D8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 148D904C1562C64E006433D8 /* ViewController.m */; };
 		148D90501562C64E006433D8 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 148D904E1562C64E006433D8 /* ViewController_iPhone.xib */; };
-		148D90531562C64E006433D8 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 148D90511562C64E006433D8 /* ViewController_iPad.xib */; };
 		148D905A1562C775006433D8 /* secondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 148D90591562C775006433D8 /* secondView.xib */; };
 		148D905D1562C7A5006433D8 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 148D905C1562C7A5006433D8 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
@@ -34,7 +33,6 @@
 		148D904B1562C64E006433D8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		148D904C1562C64E006433D8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		148D904F1562C64E006433D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		148D90521562C64E006433D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		148D90591562C775006433D8 /* secondView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = secondView.xib; sourceTree = "<group>"; };
 		148D905B1562C7A5006433D8 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		148D905C1562C7A5006433D8 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 				148D904B1562C64E006433D8 /* ViewController.h */,
 				148D904C1562C64E006433D8 /* ViewController.m */,
 				148D904E1562C64E006433D8 /* ViewController_iPhone.xib */,
-				148D90511562C64E006433D8 /* ViewController_iPad.xib */,
 				148D90401562C64E006433D8 /* Supporting Files */,
 				148D90591562C775006433D8 /* secondView.xib */,
 				148D905B1562C7A5006433D8 /* SecondViewController.h */,
@@ -161,7 +158,6 @@
 			files = (
 				148D90441562C64E006433D8 /* InfoPlist.strings in Resources */,
 				148D90501562C64E006433D8 /* ViewController_iPhone.xib in Resources */,
-				148D90531562C64E006433D8 /* ViewController_iPad.xib in Resources */,
 				148D905A1562C775006433D8 /* secondView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,14 +193,6 @@
 				148D904F1562C64E006433D8 /* en */,
 			);
 			name = ViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		148D90511562C64E006433D8 /* ViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				148D90521562C64E006433D8 /* en */,
-			);
-			name = ViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
